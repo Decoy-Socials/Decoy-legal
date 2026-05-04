@@ -46,6 +46,48 @@
       margin: 0 10px;
     }
     .footer a:hover { color: #F7F5F2; }
+    
+    /* Carousel Styles */
+    .carousel-container {
+      width: 100%;
+      margin: 60px 0 20px;
+      overflow: hidden;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 20px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .carousel::-webkit-scrollbar { display: none; }
+    
+    /* Center the first and last images */
+    .carousel::before, .carousel::after {
+      content: '';
+      flex: 0 0 calc(50vw - 120px);
+    }
+    
+    .carousel img {
+      height: 500px;
+      width: auto;
+      border-radius: 20px;
+      scroll-snap-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 1px solid #222;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+      .carousel::before, .carousel::after {
+        flex: 0 0 calc(50vw - 90px);
+      }
+      .carousel img {
+        height: 400px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -57,6 +99,18 @@
     
     <!-- Link this to your App Store URL once it's published! -->
     <a href="#" class="download-btn">Download on the App Store</a>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <img src="ss1.png" alt="Screenshot 1">
+      <img src="ss2.png" alt="Screenshot 2">
+      <img src="ss3.png" alt="Screenshot 3">
+      <img src="ss4.png" alt="Screenshot 4">
+      <img src="ss5.png" alt="Screenshot 5">
+      <img src="ss6.png" alt="Screenshot 6">
+      <img src="ss7.png" alt="Screenshot 7">
+    </div>
   </div>
 
   <div class="footer">
