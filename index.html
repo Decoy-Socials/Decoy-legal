@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Decoy — The Social Deduction Party Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top center, #2a2a2a 0%, #111111 60%);
       background-color: #111111;
+      background-attachment: fixed;
       color: #F7F5F2;
       margin: 0;
       display: flex;
@@ -16,24 +21,43 @@
       align-items: center;
       text-align: center;
     }
-    .hero { margin-top: 100px; padding: 20px; flex-grow: 1; }
+    .hero { margin-top: 80px; padding: 20px; flex-grow: 1; display: flex; flex-direction: column; align-items: center; }
     .app-icon {
       width: 180px;
       height: 180px;
       border-radius: 22.5%;
-      margin-bottom: 24px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      margin-bottom: 32px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
     }
-    h1 { font-size: 48px; font-weight: 800; margin-bottom: 10px; }
-    p { font-size: 20px; color: #aaaaaa; margin-bottom: 40px; }
+    .tagline { 
+      font-family: 'Playfair Display', serif;
+      font-size: 32px; 
+      font-weight: 400;
+      font-style: italic;
+      color: #F7F5F2; 
+      margin-bottom: 48px; 
+      max-width: 600px;
+      line-height: 1.3;
+    }
     .download-btn {
-      background-color: #F7F5F2;
-      color: #111111;
-      padding: 16px 32px;
-      border-radius: 12px;
+      background-color: #111111;
+      color: #F7F5F2;
+      padding: 14px 28px;
+      border: 1px solid #444;
+      border-radius: 30px;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
+      font-weight: 600;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .download-btn:hover {
+      background-color: #222;
+      border-color: #666;
+      transform: translateY(-2px);
     }
     .footer {
       padding: 40px;
@@ -50,7 +74,7 @@
     /* Carousel Styles */
     .carousel-container {
       width: 100%;
-      margin: 60px 0 20px;
+      margin: 20px 0 40px;
       overflow: hidden;
     }
     .carousel {
@@ -94,11 +118,15 @@
 
   <div class="hero">
     <img src="icon.png" alt="Decoy App Icon" class="app-icon">
-    <h1>DECOY</h1>
-    <p>Lying builds stronger bonds. Trust no one.</p>
+    <h2 class="tagline">Lying builds stronger bonds.<br>Trust no one.</h2>
     
     <!-- Link this to your App Store URL once it's published! -->
-    <a href="#" class="download-btn">Download on the App Store</a>
+    <a href="#" class="download-btn">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.594 13.911c.017-3.23 2.656-4.764 2.776-4.843-1.498-2.185-3.826-2.482-4.646-2.528-1.974-.2-3.864 1.162-4.87 1.162-1.008 0-2.56-1.136-4.184-1.108-2.122.028-4.085 1.233-5.183 3.125-2.222 3.844-.567 9.53 1.597 12.645 1.055 1.523 2.308 3.234 3.945 3.176 1.58-.06 2.18-.102 4.092-.102 1.91 0 2.457.962 4.128.932 1.706-.027 2.802-1.55 3.827-3.053 1.185-1.727 1.674-3.4 1.695-3.488-.035-.015-3.192-1.222-3.177-4.918zm-2.905-6.84c.866-1.047 1.453-2.502 1.294-3.957-1.25.05-2.756.833-3.642 1.88-.79.928-1.496 2.41-1.304 3.828 1.4.108 2.784-.705 3.652-1.75z"/>
+      </svg>
+      Download on the App Store
+    </a>
   </div>
 
   <div class="carousel-container">
