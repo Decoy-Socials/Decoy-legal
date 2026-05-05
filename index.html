@@ -112,6 +112,40 @@
         height: 400px;
       }
     }
+    
+    .games-section {
+      max-width: 900px;
+      margin: 60px auto 40px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .game-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .game-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .game-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-style: italic;
+      margin: 0 0 12px;
+      color: #F7F5F2;
+    }
+    .game-card p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #aaa;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -122,7 +156,7 @@
       Decoy: The Social Deduction Party Game
     </h1>
     <img src="icon.png" alt="Decoy App Icon" class="app-icon">
-    <h2 class="tagline">Lying builds stronger bonds.<br>Trust no one.</h2>
+    <h2 class="tagline">The Art of the Lie.</h2>
     
     <!-- Link this to your App Store URL once it's published! -->
     <a href="#" class="download-btn">
@@ -142,6 +176,21 @@
       <img src="ss5.png" alt="Screenshot 5">
       <img src="ss6.png" alt="Screenshot 6">
       <img src="ss7.png" alt="Screenshot 7">
+    </div>
+  </div>
+
+  <div class="games-section">
+    <div class="game-card">
+      <h3>Gaslighter</h3>
+      <p>Manipulate the truth. Use your wits to convince the group that your answers belong, even when they don't.</p>
+    </div>
+    <div class="game-card">
+      <h3>Mafia</h3>
+      <p>The classic trial of survival. Betray your friends in the night or hunt down the killers by day.</p>
+    </div>
+    <div class="game-card">
+      <h3>Imposter</h3>
+      <p>Master the mimicry. Prove you know the secret word with subtle clues—or fake it to stay hidden.</p>
     </div>
   </div>
 
